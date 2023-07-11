@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Anton & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@700 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Roboto+Slab & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2;
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: darkblue;
+}
+
+
+.menu {
+    height: 80px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: darkblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #777777;
+    font-size: 18px;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color: darkblue;
+}
+
+.menu .text-menu-selected{
+    color: darkblue;
+}
+
+.menu nav ul li a i{
+    display: none;
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #eeeeeefa;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+
+/*Portada*/
+
+
+.blog--container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background: linear-gradient(180deg, #000000 0%, #0000003c 100% ), url(../img-blog/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blog--container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/*contenedor de caregorias*/
+
+input[type="radio"]{
+    display: none;
+}
+
+.container--category{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+} 
+
+.container--category label{
+
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background: #e2e2e2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container--category label:hover{
+    opacity: 0.8;
+    background: dimgray;
+    color: #fff;
+}
+
+/*post publicaciones */
+
+.container--posts{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.posts{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 20px;
+
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.posts .post{
+    background: #fff;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.post .ctn--img{
+    width: 100%;
+}
+
+.posts--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post--texts{
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.post--span{
+  display: block;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.ctn--tag{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 16px;
+    margin-top: 10px;
+
+}
+
+
+.ctn--tag li{
+    list-style: none;
+    font-size: 14px;
+    margin: 4px;
+    padding: 6px 10px;
+    background: #e8e8e8;
+    cursor: default;
+}
+
+.posts--button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: darkblue;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.posts--button:hover{
+    opacity: 0.9;
+}
+
+/*sistema de filtrado*/
+
+[value="MANGAS"]:checked ~ .posts .post.post:not([data-category~="MANGAS"]){
+    display: none;
+}
+
+[value="COMICS"]:checked ~ .posts .post.post:not([data-category~="COMICS"]){
+    display: none;
+}
+
+[value="ANIME-FANTASIA"]:checked ~ .posts .post.post:not([data-category~="ANIME-FANTASIA"]){
+    display: none;
+}
+
+[value="ANIMES-TERROR"]:checked ~ .posts .post.post:not([data-category~="ANIMES-TERROR"]){
+    display: none;
+}
+
+[value="ANIMES-MISTERIO"]:checked ~ .posts .post.post:not([data-category~="ANIMES-MISTERIO"]){
+    display: none;
+}
+
+[value="ANIMES-ROMANCE"]:checked ~ .posts .post.post:not([data-category~="ANIMES-ROMANCE"]){
+    display: none;
+}
+
+[value="ANIMES-CIENCIA-FICCION"]:checked ~ .posts .post.post:not([data-category~="ANIMES-CIENCIA-FICCION"]){
+    display: none;
+}
+
+[value="TODOS"]:checked ~ .container-category [for="TODOS"],
+[value="MANGAS"]:checked ~ .container-category [for="MANGAS"],
+[value="COMICS"]:checked ~ .container-category [for="COMICS"],
+[value="ANIME-FANTASIA"]:checked ~ .container-category [for="ANIME-FANTASIA"],
+[value="ANIMES-TERROR"]:checked ~ .container-category [for="ANIMES-TERROR"],
+[value="ANIMES-MISTERIO"]:checked ~ .container-category [for="ANIMES-MISTERIO"],
+[value="ANIMES-ROMANCE"]:checked ~ .container-category [for="ANIMES-ROMANCE"]
+[value="ANIMES-CIENCIA-FICCION"]:checked ~ .container-category [for="ANIMES-CIENCIA-FICCION"]{
+    background: darkblue;
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px){
+    .posts{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px){
+    .posts{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px){
+    .posts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
